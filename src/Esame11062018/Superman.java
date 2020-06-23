@@ -2,15 +2,9 @@ package Esame11062018;
 
 public class Superman extends Thread {
 
-    Runnable rrr;
-
-    public Superman(Runnable rrr){
-        this.rrr=rrr;
-    }
-
-    @Override
-    public void run() {
+    public Superman(Runnable rrr) {
         rrr.run();
         System.out.println(Thread.currentThread().getName());
     }
+
 }
