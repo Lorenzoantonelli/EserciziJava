@@ -10,7 +10,7 @@ public class PointerUtils {
             Field val = pClass.getDeclaredField("val");
             val.set(p,new Object());
         }
-        catch (NoSuchFieldException e) {} catch (IllegalAccessException e) {}
+        catch (NoSuchFieldException | IllegalAccessException e) {}
     }
 
 }
