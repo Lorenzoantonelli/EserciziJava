@@ -10,7 +10,6 @@ package Esame11062018;
 public class Test {
 
     public static void main(String[] args) {
-
         Runnable rrr = () -> Thread.currentThread().setName(args[0]);
         new Superman(rrr).start();
     }

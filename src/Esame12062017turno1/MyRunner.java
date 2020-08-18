@@ -10,9 +10,8 @@ public class MyRunner extends Runner {
     public void run() {
         while (!p.arrivato()) {
             try {
-                this.sleep(delay);
-            } catch (InterruptedException e) {
-            }
+                sleep(delay);
+            } catch (InterruptedException ignored) { }
             p.step();
             p.leave();
             p=p.getNext();

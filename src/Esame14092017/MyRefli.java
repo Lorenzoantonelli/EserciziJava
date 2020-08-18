@@ -6,9 +6,8 @@ public class MyRefli implements Refli {
     public Object echoType(Object x) {
         Class<?> xClass = x.getClass();
         try {
-            Object newObj = xClass.newInstance();
-            return newObj;
-        } catch (IllegalAccessException e) {}
+            return xClass.newInstance();
+        } catch (IllegalAccessException ignored) {}
         catch (InstantiationException e) {
             System.out.println("La classe "+xClass.getSimpleName()+" non ha un costruttore di default!");
         }
